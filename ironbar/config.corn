@@ -1,0 +1,119 @@
+{
+    position = "top"
+    height = 34
+    margin.top = 0
+    margin.bottom = 0
+    margin.left = 5
+    margin.right = 5
+
+    start = [
+        {
+            type = "workspaces"
+            all_monitors = false
+
+            favorites.eDP-1 = ["1" "2" "3" "4" "5"]
+            favorites.DP-1 = ["6" "7" "8" "9" "10" "11" "12" "13" "14" "15"]
+
+            name_map.1 = "1"
+            name_map.2 = "2"
+            name_map.3 = "3"
+            name_map.4 = "4"
+            name_map.5 = "5"
+            name_map.6 = "1"
+            name_map.7 = "2"
+            name_map.8 = "3"
+            name_map.9 = "4"
+            name_map.10 = "5"
+            name_map.11 = "6"
+            name_map.12 = "7"
+            name_map.13 = "8"
+            name_map.14 = "9"
+            name_map.15 = "10"
+
+            on_scroll_up = "hyprctl dispatch workspace m-1"
+            on_scroll_down = "hyprctl dispatch workspace m+1"
+        }
+
+        {
+            name = "mediamanager"
+            type = "script"
+            cmd = "~/.config/hypr/scripts/scroller"
+            mode = "watch"
+            on_click_left = "~/.config/hypr/scripts/mediamanager -c play-pause"
+            on_scroll_up = "~/.config/hypr/scripts/mediamanager -c prev"
+            on_scroll_down = "~/.config/hypr/scripts/mediamanager -c next"
+        }
+    ]
+
+    center = []
+
+    end = [
+        {
+            type = "clipboard"
+            max_items = 3
+            truncate.mode = "end"
+            truncate.length = 50
+        }
+        
+        {
+            name = "kb"
+            type = "keyboard"
+            show_scroll = false
+            icons.caps_on = "󰪛"
+            icons.layout_map.'English (US)' = "EN"
+            icons.layout_map.Russian = "RU"
+        }
+
+        {
+            type = "tray"
+            icon_size = 18
+            direction = "horizontal"
+            on_click_left = "default"
+        }
+
+        {
+            type = "volume"
+            format = "{icon} {percentage}%"
+            max_volume = 100
+            truncate = "end"
+            justify = "left"
+            marquee.enable = true
+            marquee.max_length = 20
+            orientation = "horizontal"
+            icons.volume_high = ""
+            icons.volume_medium = ""
+            icons.volume_low = ""
+            icons.muted = ""
+
+            on_click_right = "pavucontrol"
+            on_scroll_up = "pamixer -i 5"
+            on_scroll_down = "pamixer -d 5"
+
+        }
+
+        {
+            type = "battery"
+            format = "{percentage}%"
+            icon_size = 20
+            thresholds.warning = 20
+            thresholds.critical = 5
+        }
+
+        {
+            type = "clock"
+            format = "%H:%M | %d.%m.%Y"
+        }
+
+        {
+            type = "notifications"
+            show_count = false
+
+            icons.closed_none = ""
+            icons.closed_some = "<span foreground='#fb4934'><sup></sup></span>"
+            icons.closed_dnd = ""
+            icons.open_none = ""
+            icons.open_some = "<span foreground='#fb4934'><sup></sup></span>"
+            icons.open_dnd = ""
+        }
+    ]
+}

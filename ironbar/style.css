@@ -1,0 +1,122 @@
+@import "colors.css";
+
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.background {
+    background-color: transparent;
+}
+
+button {
+    background: transparent;
+    padding: 0 4px;
+}
+
+button:hover {
+    background-color: @bg-hover;
+}
+
+.workspaces {
+    background-color: @bg-module;
+    margin: 4px 0px;
+    padding: 0 2px;
+    border-radius: 8px;
+}
+
+.workspaces .item {
+    padding: 0 4px;
+    margin: 1px 1px;
+    color: @text-muted;
+    border-radius: 10px;
+}
+
+.workspaces .item.focused {
+    background-color: @accent;
+    color: @bg-dark;
+    border-radius: 10px;
+    padding: 0 4px;
+}
+
+#mediamanager {
+    background-color: @lizzy-bg;
+    min-width: 170px;
+    color: @lizzy-text;
+    font-family: "WDXL Lubrifont TC", monospace;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 2px 8px;
+    margin: 4px 12px;
+    border-radius: 6px;
+    text-shadow: 0 0 2px @lizzy-shadow1, 0 0 5px @lizzy-shadow2;
+}
+
+.clipboard {
+    color: @green;
+    background-color: @bg-module;
+    padding: 0px 0.75em;
+    border-radius: 8px;
+    margin: 4px 4px;
+}
+
+.keyboard {
+    background-color: @bg-module;
+    border-radius: 8px;
+    margin: 4px 4px;
+    color: @orange;
+    padding: 0 8px;
+    min-width: 16px;
+}
+
+.keyboard .layout {
+    color: @orange;
+}
+
+.tray {
+    background-color: @bg-module;
+    padding: 0 0.75em;
+    border-radius: 8px;
+    margin: 4px 4px;
+}
+
+.volume {
+    color: @blue;
+    background-color: @bg-module;
+    padding: 0px 0.75em;
+    border-radius: 8px;
+    margin: 4px 4px;
+}
+
+
+
+.battery {
+    color: @purple;
+    background-color: @bg-module;
+    padding: 0 0.75em;
+    border-radius: 8px;
+    margin: 4px 4px;
+}
+
+.clock {
+    color: @text-main;
+    background-color: @bg-module;
+    padding: 0 0.75em;
+    border-radius: 8px;
+    margin: 4px 6px;
+}
+
+.notifications {
+    color: @text-main;
+    background-color: @bg-module;
+    padding: 0 6px;
+    border-radius: 8px;
+    margin: 4px 2px;
+}
+
+.notifications .button {
+    color: @accent;
+}
